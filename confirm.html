@@ -1,0 +1,31 @@
+<h2>Confirm</h2>
+
+<p>Gym: {{ gym }}</p>
+<p>Plan: {{ plan }}</p>
+
+<p>Add-ons:</p>
+{% if addons_list %}
+  <ul>
+    {% for a in addons_list %}
+      <li>{{ a }}</li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>None</p>
+{% endif %}
+
+<p>Total cost: £{{ cost }}</p>
+
+<form action="/pay" method="get">
+  <input type="hidden" name="age" value="{{ age }}">
+  <input type="hidden" name="student" value="{{ student }}">
+  <input type="hidden" name="plan" value="{{ plan }}">
+  <input type="hidden" name="gym" value="{{ gym }}">
+
+  <input type="hidden" name="addon_swim" value="{{ addon_swim }}">
+  <input type="hidden" name="addon_classes" value="{{ addon_classes }}">
+  <input type="hidden" name="addon_massage" value="{{ addon_massage }}">
+  <input type="hidden" name="addon_physio" value="{{ addon_physio }}">
+
+  <button type="submit">Pay</button>
+</form>

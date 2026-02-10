@@ -1,0 +1,57 @@
+<h2>Signup</h2>
+
+<form action="/recommend" method="get">
+  Age:
+  <input name="age" type="number" min="0" required>
+  <br><br>
+
+  Student:
+  <input type="checkbox" name="student" value="1">
+  <br><br>
+
+  Plan:
+  <select name="plan" required>
+    <option value="Anytime">Anytime</option>
+    <option value="Off-peak">Off-peak</option>
+    <option value="Super-off peak">Super-off peak</option>
+    <option value="None">None (no gym membership)</option>
+  </select>
+
+  <br><br>
+
+  <h3>Add-ons</h3>
+
+  Swimming pool:
+  <select name="addon_swim">
+    <option value="">None</option>
+    <option value="swim:with">With gym membership</option>
+    <option value="swim:without">Without gym membership</option>
+  </select>
+  <br><br>
+
+  Classes:
+  <select name="addon_classes">
+    <option value="">None</option>
+    <option value="classes:with">With gym membership</option>
+    <option value="classes:without">Without gym membership</option>
+  </select>
+  <br><br>
+
+  Massage therapy:
+  <select name="addon_massage">
+    <option value="">None</option>
+    <option value="massage:with">With gym membership</option>
+    <option value="massage:without">Without gym membership</option>
+  </select>
+  <br><br>
+
+  Physiotherapy:
+  <select name="addon_physio">
+    <option value="">None</option>
+    <option value="physio:with">With gym membership</option>
+    <option value="physio:without">Without gym membership</option>
+  </select>
+  <br><br>
+
+  <button type="submit">Go</button>
+</form>
